@@ -56,8 +56,9 @@ def process_json_file(input_file, output_file):
         manufacturer = entry.get("MANUFACTURER")
         serial_number = entry.get("Serial Number")
 
-        # Skip if brand and product name already exist
-        if model and manufacturer:
+        # Require both MODEL and MANUFACTURER; otherwise skip with a message
+        if not model or not manufacturer:
+            print(f"⚠️ Skipping entry {entry.get('entity_id')} - Missing MODEL or MANUFACTURER.")
             continue
 
         # Build query string
@@ -88,6 +89,6 @@ def process_json_file(input_file, output_file):
 
 
 if __name__ == "__main__":
-    input_file = "data.json"          # File you uploaded earlier
-    output_file = "google_results.json"
+    input_file = "/Users/musfiraaslam/Documents/GitHub/websearchh/WebSearch-Scrape/testing/search/inputs/victus.json"          # File you uploaded earlier
+    output_file = "/Users/musfiraaslam/Documents/GitHub/websearchh/WebSearch-Scrape/testing/search/outputs/victus_results.json"
     process_json_file(input_file, output_file)
