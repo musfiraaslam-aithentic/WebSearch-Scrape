@@ -1,0 +1,10 @@
+{
+  "success": true,
+  "status": "completed",
+  "completed": 0,
+  "total": 0,
+  "creditsUsed": 0,
+  "expiresAt": "2025-10-14T11:12:02.000Z",
+  "data": [],
+  "warning": "Only 0 result(s) found. For broader coverage, try crawling with crawlEntireDomain=true or start from a higher-level path like microsoft.com"
+}
