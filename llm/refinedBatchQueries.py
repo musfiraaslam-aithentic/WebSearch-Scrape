@@ -137,4 +137,4 @@ def process_queries_file(filename="queries.txt", output_dir="results", skip_exis
 
 # ---------- Run ----------
 if __name__ == "__main__":
-    process_queries_file("queries.txt", output_dir="results", skip_existing=True)
+    process_queries_file("queries.txt", output_dir="groq_results", skip_existing=True)
